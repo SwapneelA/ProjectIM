@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+      "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.gasagency.pojo">
+	<class name="CRDDetails" table="crd">
+		<id name="id" column="Id">
+			<generator class="increment" />
+		</id>
+		<property name="crdNumber" column="CRDNumber" />
+		
+		<property name="invoiceNumber" column="InvoiceNumber" />
+		<property name="crdDate" column="CRDDate" />
+		<property name="qtyDomesticEmpty" column="QtyOfDomesticEmpty" />
+		<property name="qtyNonDomesticSmallEmpty" column="QtyOfNonDomesticSmallEmpty" ></property>
+		<property name="qtyNonDomesticLargeEmpty" column="QtyOfNonDomesticLargeEmpty" />
+		<property name="qtyDomesticSubsidisedDefective" column="QtyOfDomesticSubsidisedDefective" />
+		<property name="qtyDomesticNonSubsidisedDefective" column="QtyOfDomesticNonSubsidisedDefective" />
+		<property name="qtyNonDomesticSmallDefective" column="QtyOfNonDomesticSmallDefective" />
+		<property name="qtyNonDomesticLargeDefective" column="QtyOfNonDomesticLargeDefective" />
+	</class>
+	
+</hibernate-mapping>

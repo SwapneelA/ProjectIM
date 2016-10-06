@@ -1,0 +1,41 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd 
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+        
+     
+	 
+<mvc:annotation-driven />
+	
+<context:annotation-config />
+     <context:component-scan base-package="com.gasagency.controller" />
+	
+		<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	
+			<property name="prefix" value="/jsp/" />
+			<property name="suffix" value=".jsp" />
+		</bean>
+		
+		<bean class="com.gasagency.handler.impl.AccountHandlerImpl" id="accountHandler" />
+		<bean class="com.gasagency.handler.impl.DataHandler" id="dataHandler" />
+		<bean class="com.gasagency.service.impl.AccountServiceImpl" id="accountService" />
+		<bean class="com.gasagency.service.impl.StockDetailsServiceImpl" id="stockDetailsService" />
+		<bean class="com.gasagency.service.impl.InvoiceDetailsService" id="invoiceDetailsService" />
+		<bean class="com.gasagency.service.impl.DeliveryPersonServiceImpl" id="deliveryPersonService" />
+		<bean class="com.gasagency.service.impl.CurrentTransactionServiceImpl" id="currentTransactionService" />
+		<bean class="com.gasagency.service.impl.CrdServiceImpl" id="crdServiceImpl" />
+		<bean class="com.gasagency.service.impl.TransactionServiceImpl" id="transactionService" />
+		<bean class="com.gasagency.service.impl.CylinderTypeServiceImpl" id="cylinderTypeService" />
+		<bean class="com.gasagency.service.impl.CylinderVolumeServiceImpl" id="cylinderVolumeService" />
+		<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		    <property name="basenames">
+		    	<list>
+		        	<value>WEB-INF/resources/prop</value>
+		        </list>
+		    </property> 
+		</bean>
+</beans>

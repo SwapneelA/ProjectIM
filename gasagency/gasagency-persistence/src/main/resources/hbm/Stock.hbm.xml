@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+      "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.gasagency.pojo">
+	<class name="Stock" table="Stock">
+		<composite-id>
+			<key-property name="stockId" column="StockId"  />
+			<key-property name="transactionId" column="TransactionId" />
+		</composite-id>
+		<property name="openingStock" column="OpeningStock" update="false"></property>
+		<property name="closingStock" column="ClosingStock"></property>
+	</class>
+</hibernate-mapping>

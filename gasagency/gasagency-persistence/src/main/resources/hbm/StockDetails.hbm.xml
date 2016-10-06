@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+      "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.gasagency.pojo">
+	<class name="StockDetails" table="StockDetails">
+		<id name="id" column="StockId">
+			<generator class="increment" />
+		</id>
+		<property name="cylinderTypeId" column="CylinderTypeId"></property>
+		<property name="volumeId" column="VolumeId"></property>
+		<property name="quantity" column="Quantity"></property>
+		<property name="createDate" column="CreateDate"></property>
+		<property name="updateDate" column="UpdateDate"></property>
+	</class>
+</hibernate-mapping>

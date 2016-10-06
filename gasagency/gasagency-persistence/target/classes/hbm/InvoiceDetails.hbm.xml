@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+      "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.gasagency.pojo">
+	<class name ="InvoiceDetails" table="InvoiceDetails">
+		<id name="id" column="Id">
+			<generator class="increment" />
+		</id>
+		<property name="invoiceNumber" column="InvoiceId" />
+		<property name="invoiceValue" column="InvoiceValue" />
+		<property name="truckNumber" column="TruckNumber" />
+		<property name="invoiceDate" column="InvoiceDate" />
+		<property name="receivedDate" column="InvoiceReceivedDate" />
+		<property name="qtyCommodity" column="QtyOfCommodity" />		
+		<property name="qtySubDomestic" column="QtyOfSubDomestic" />
+		<property name ="qtyNonSubDomestic" column= "QtyOfNonSubDomestic" />
+		<property name="qtyNonDomesticSmall" column="QtyOfNonDomesticSmall" />
+		<property name="qtyNonDomesticLarge" column ="QtyOfNonDomesticLarge" />
+		<property name="invoiceType" column="InvoiceTypeId" />
+		<property name="createDate" column="CreateDate" />
+		<property name="updateDate" column ="UpdateDate" />
+	</class>
+</hibernate-mapping>

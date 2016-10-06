@@ -1,0 +1,73 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd 
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+	<property name="username" value="root" />
+	<property name="password" value="root" />
+	<!-- <property name="driverClass" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" /> -->
+	<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+	
+	<property name="url" value="jdbc:mysql://localhost/GasAgency" />
+</bean>
+
+<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+	<property name="dataSource" ref="dataSource" />
+	<property name="mappingResources">
+		<list>
+			<value>hbm/Account.hbm.xml</value>
+			<value>hbm/StockDetails.hbm.xml</value>
+			<value>hbm/InvoiceDetails.hbm.xml</value>
+			<value>hbm/DeliveryPersonMaster.hbm.xml</value>
+			<value>hbm/CurrentTransaction.hbm.xml</value>
+			<value>hbm/CrdDetails.hbm.xml</value>
+			<value>hbm/TransactionInfo.hbm.xml</value>
+			<value>hbm/CylinderTypeMaster.hbm.xml</value>
+			<value>hbm/CylinderVolumeMaster.hbm.xml</value>
+			<value>hbm/Stock.hbm.xml</value>
+		</list>
+	</property>
+	<property name="hibernateProperties">
+		<props>
+			<!-- <prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop> -->
+			<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+			<prop key="hibernate.show_sql">true</prop>
+		</props>
+	</property>
+</bean>
+
+<bean id="accountDAO" class="com.gasagency.dao.impl.AccountDAOImpl"></bean>
+<bean id="stockDetailsDAO" class="com.gasagency.dao.impl.StockDetailsDAOImpl"></bean>
+<bean id="invoiceDetailsDAO" class="com.gasagency.dao.impl.InvoiceDetailsDAOImpl"></bean>
+<bean id="deliveryPersonDAO" class="com.gasagency.dao.impl.DeliveryPersonDAOImpl"></bean>
+<bean id="currentTransactionDAO" class="com.gasagency.dao.impl.CurrentTransactionDAOImpl"></bean>
+<bean id="crdDaoImpl" class="com.gasagency.dao.impl.CrdDAOImpl"></bean>
+<bean id="transactionDaoImpl" class="com.gasagency.dao.impl.TransactionDAOImpl" />
+<bean id="cylinderVolumeDAO" class="com.gasagency.dao.impl.CylinderVolumeDAOImpl" />
+<bean id="cylinderTypeDAO" class="com.gasagency.dao.impl.CylinderTypeDAOImpl" />
+
+<!--tx:annotation-driven transaction-manager="transactionManager" / -->
+<!-- <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+		
+</bean>-->
+<!-- <bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean" abstract="true">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="get*">PROPAGATION_REQUIRED</prop>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED</prop>
+				<prop key="add*">PROPAGATION_REQUIRED</prop>
+				<prop key="mark*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean> -->
+</beans>

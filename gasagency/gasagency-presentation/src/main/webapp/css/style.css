@@ -1,0 +1,141 @@
+.app-navbar
+{
+font-weight: 400;
+-webkit-font-smoothing: antialiased;
+background-color : #3097d1;
+border-color : #1c73a5;
+}
+.pd > div > {
+color: rgba(255, 255, 255, 0.8);
+}
+
+.navigationclass{
+	font-family: "Whitney SSm A", "Whitney SSm B", "Avenir", "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Ubuntu", sans-serif;
+	color:black;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #1e3948;
+  background-color: #f5f8fa;
+  letter-spacing: 0;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-align: -webkit-match-parent;
+}
+
+.navbar-nav {
+  margin: 7px -15px;
+}
+/* .navbar-default .navbar-brand{
+
+
+font-size : 20px;
+font-weight: 400;
+-webkit-font-smoothing: antialiased;
+} */
+
+.navbar-default .navbar-nav>li>a{
+/* /*font-family: "Whitney SSm A", "Whitney SSm B", "Avenir", "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Ubuntu", sans-serif;
+color:white;*/
+font-size : 16px;
+font-weight: 400;
+-webkit-font-smoothing: antialiased;
+}
+ */
+.no-margin{
+margin:0px;
+}
+
+.no-padding{
+padding:0px;
+}
+.center-table
+{
+  margin: 0 auto !important;
+  float: none !important;
+}
+.table td {
+   text-align: center;   
+}
+
+.center-h1{
+ margin:  auto !important;
+  float: none !important;
+  text-align: center;   
+}
+
+.common-header{
+
+background-color : #3097d1;
+
+}
+ .invoice-label{
+	font-family: "Whitney SSm A", "Whitney SSm B", "Avenir", "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Ubuntu", sans-serif;
+    font-weight: normal;
+    clear: both;
+    font-size:20px;
+} 
+/* span {
+	font-family: "Whitney SSm A", "Whitney SSm B", "Avenir", "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Ubuntu", sans-serif;
+    font-weight: normal;
+    clear: both;
+    font-size:18px;
+} */
+.invoice-div{
+	margin-bottom:40px;
+}
+
+.button-style{
+	font-size:large;
+	font-family: "Whitney SSm A", "Whitney SSm B", "Avenir", "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Ubuntu", sans-serif;
+}
+table{
+	font-family: "Whitney SSm A", "Whitney SSm B", "Avenir", "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Ubuntu", sans-serif;
+    font-weight: normal;
+    clear: both;
+    font-size:16px;
+}
+button{
+	font-family: "Whitney SSm A", "Whitney SSm B", "Avenir", "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Ubuntu", sans-serif;
+    font-weight: normal;
+    clear: both;
+    font-size:16px;
+}
+#headerDiv{
+	font-family: "Whitney SSm A", "Whitney SSm B", "Avenir", "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Ubuntu", sans-serif;
+    font-weight: normal;
+    clear: both;
+    font-size:22px;
+}
+
+#loginform{
+	width:350px;
+	margin:0 auto;
+	margin-top:175px;
+	border:5px;
+}
+
+#loginformpaneldiv{
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 8px;
+	width:
+}
+.loginpagecss{
+	
+	font-family: "Whitney SSm A", "Whitney SSm B", "Avenir", "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Ubuntu", sans-serif;
+    font-weight: normal;
+    clear: both;
+    font-size:14px;
+	
+}
+.commoncss{
+	
+	font-family: "Whitney SSm A", "Whitney SSm B", "Avenir", "Segoe UI", "Helvetica Neue", Helvetica, Arial, "Ubuntu", sans-serif;
+    font-weight: normal;
+    clear: both;
+    font-size:14px;
+	
+}

@@ -1,0 +1,35 @@
+#logo{
+
+font-weight: 100;
+font-family: "Comic Sans MS", cursive, sans-serif;
+line-height: 2.0;
+margin-left: 50px;
+margin-right: 50px;
+border-bottom:1px solid;
+}
+
+#font_style{
+line-height: 50px;
+font-size: 22px;
+font-weight: 100;
+font-family: Verdana, Geneva, sans-serif;
+}
+
+#formlayout{
+margin-top:130px;
+height:330px;;
+width:300px;
+border:1px solid black;
+}
+
+#divstyling{
+margin-top:15px;
+}
+
+#buttonstyling{
+margin-botton:15px;
+margin-top:30px;
+line-height:25px;
+font-weight: 100;
+font-family: Verdana, Geneva, sans-serif;
+}
